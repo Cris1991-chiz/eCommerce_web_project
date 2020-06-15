@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--fontawesome CDN-->
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Bootstrap CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="header">
+        <div class="menu-reg">
+            <img src="image/logo.jpg" class="btn-logo">
+            <img src="image/s4.jpg" class="img-reg">
+            <ul class="btn-reg">
+                <li class="btn-home"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="login.html">Register</a></li>
+            </ul>
+            <div class="btn-register">
+                <h4>Login Here</h4>
+                <form action="post" action="register.php">
+                    <div class=input-group>
+                        <label>Username</label>
+                        <input type="text" name="username">
+                    </div>
+                    <div class=input-group>
+                        <label>Password</label>
+                        <input type="text" name="password">
+                    </div>
+                    <div class="input-group">
+                        <input type="submit" name="register" value="Register" class="btn">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
