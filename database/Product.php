@@ -35,14 +35,18 @@ class Product {
 
     public function getProduct($item_id = null, $table = 'market.product') {
         if(isset($item_id)) {
-            $stmt = $this->con->prepare("SELECT * FROM {$table} WHERE item_id = :item_id");
+            $stmt = $this->con->prepare("SELECT * FROM $table WHERE item_id = :item_id");
+            //var_dump($stmt);
             $stmt->bindParam(':item_id', $item_id);
             $stmt->execute();
             $resultArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            // $resultArray = array();
             
-            /*while($table = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $resultArray[] = $table;
-            }*/
+            // while($table = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            //     $resultArray[] = $table;
+            // }
+
             return $resultArray;
         }
     }

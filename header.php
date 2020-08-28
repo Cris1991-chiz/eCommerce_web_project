@@ -10,7 +10,7 @@
 
             <form class="search-form" action="search.php" method="post">
                 <input type="text" name="search" class="form-control"> <!--Bootstrap-->
-                <span class="input-group-text"><button type="submit" name="submit-search"><i class="fa fa-search"></button></i></span> <!--Bootstrap-->
+                <span class="input-group-text"><i class="fa fa-search"></i></span> <!--Bootstrap-->
             </form>
         </div>
         <div class="menu-bar">

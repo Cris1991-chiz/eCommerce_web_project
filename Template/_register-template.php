@@ -32,7 +32,7 @@
 <section class="header">
         <div class="menu-reg">
             <img src="./assets/image/logo.jpg" class="btn-logo">
-            <img src="./assets/image/logo.jpg" class="img-reg">
+            <img src="./assets/image/s4.jpg" class="img-reg">
             <ul class="btn-reg">
                 <li class="btn-home"><a href="index.php"><i class="fa fa-home"></i>Home</a></li>
                 <li><a href="login.php">Login</a></li>

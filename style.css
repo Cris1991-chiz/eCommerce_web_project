@@ -209,7 +209,7 @@ input::placeholder{
     .top-nav-bar{
         height: 118px;
         border-bottom: 0;
-        top: 0.5rem;
+        top: 0;
     }
     .search-box{
         width: 100%;

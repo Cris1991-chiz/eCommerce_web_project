@@ -54,7 +54,6 @@ Class Cart {
     }
 
     //delete cart item using item_id
-
     public function deleteCartItem($item_id = null, $table = 'market.cart') {
         if($item_id != null) {
             $stmt = $this->con->prepare("DELETE FROM $table WHERE item_id = $item_id");
@@ -68,7 +67,7 @@ Class Cart {
         }   
     }
 
-
+    // calculate sub total
     public function getSum($arr) {
         if(isset($arr)) {
             $sum = 0;

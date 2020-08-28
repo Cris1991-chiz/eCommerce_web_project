@@ -8,9 +8,10 @@ require ('../database/Product.php');
 
 // DBController object
 $db = new DBController();
+$dbh = $db->connect();
 
 // Product object
-$product = new Product($db);
+$product = new Product($dbh);
 
 if (isset($_POST['itemid'])){
     $result = $product->getProduct($_POST['itemid']);

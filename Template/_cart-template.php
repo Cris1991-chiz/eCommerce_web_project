@@ -21,7 +21,7 @@
                     //$result = $product->getProduct(5);
                     //print_r($result);
                     foreach($product->getData('market.cart') as $item) :
-                        print_r($item);
+                        //print_r($item);
                         $cart = $product->getProduct($item['item_id']);
                         //print_r($cart);
                         $subTotal[] = array_map(function($item) {
@@ -51,9 +51,9 @@
                                     <!-- product qty -->
                                         <div class="qty d-flex pt-2">
                                             <div class="d-flex font-rale w-25">
-                                                <button class="qty-up border px-1 w-20 bg-light" data-id="<?php echo $item['item_id'] ?? '0'; ?>"><i class="fas fa-angle-up"></i></button>
-                                                <input type="text" data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty_input border px-2 w-50 bg-light" disabled value="1" placeholder="1">
-                                                <button data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty-down border px-1 w-20 bg-light"><i class="fas fa-angle-down"></i></button>
+                                                <button class="qty-up border px-3 w-20 bg-light" data-id="<?php echo $item['item_id'] ?? '0'; ?>"><i class="fas fa-angle-up"></i></button>
+                                                <input type="text" data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty_input border px-2 w-50 bg-light" style="text-align: center;" disabled value="1" placeholder="1">
+                                                <button data-id="<?php echo $item['item_id'] ?? '0'; ?>" class="qty-down border px-3 w-20 bg-light"><i class="fas fa-angle-down"></i></button>
                                             </div>
                                             <form method="post">
                                                 <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? 0; ?>">
@@ -87,7 +87,7 @@
                         <div class="sub-total border text-center mt-2">
                             <h6 class="font-size-12 font-rale text-success py-3"><i class="fas fa-check"></i> Your order is eligible for FREE Delivery.</h6>
                             <div class="border-top py-4">
-                                <h5 class="font-baloo font-size-20">Subtotal (<?php echo isset($subTotal) ? count($subTotal) : 0; ?>):&nbsp; <span class="text-danger">$<span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span></span> </h5>
+                                <h5 class="font-baloo font-size-20">Subtotal ( <?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; <span class="text-danger">$<span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span></span> </h5>
                                 <button type="submit" class="btn btn-warning mt-3">CHECKOUT</button>
                                 <h5>or</h5>
                                 <button type="submit" class="btn btn-warning mt-1">Checkout PAYPAL</button>

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     // product qty section
     let $qty_up = $(".qty .qty-up");
     let $qty_down = $(".qty .qty-down");
@@ -59,5 +60,6 @@ $(document).ready(function(){
 
             }}); // closing ajax request
     }); // closing qty down button
+
 
 });
